@@ -1,15 +1,21 @@
+body {
+    font-family: "Roboto", sans-serif; 
+    font-size: 16px; 
+    font-weight: 400; 
+    font-style: normal; 
+}
+
 header{
     background-color: #d3d0eca2;
 }
 
 
-
 nav a{
-    text-transform: uppercase;/*ponemos el texto en mayuscula de los link*/
+    text-transform: uppercase;
     color: #000000;
-    font-weight: bold;/*Ponemos el texto en negrita*/
+    font-weight: bold;
     font-size: 22px;
-    text-decoration: none; /*le retira el subrallado*/
+    text-decoration: none; 
 
 }
 
@@ -20,9 +26,6 @@ nav {
 }
 
 
-.Bienvenida{
-    padding-left: 35%;
-}
 
 nav li{
     display:inline;
@@ -34,6 +37,23 @@ nav a:hover{
     color: #422bc7;
 }
 
+
+.Bienvenida, .MiInfo{
+    padding-left: 10%; 
+    font-size: 24px; 
+    font-weight: bold;
+    color: #056d53; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+}
+
+
+.Comienzo, .sobreMi {
+    max-width: 800px; 
+    margin: 0 auto; 
+    padding: 20px; 
+    text-align: center; 
+}
 
 
 
