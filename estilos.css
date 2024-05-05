@@ -118,13 +118,13 @@ nav a:hover{
 
 .Skills table img[alt="java"],
 .Skills table img[alt="javaScript"] {
-    width: 170px; 
-    margin: 0 10px 20px auto; 
+    width: 350px; 
+    margin: 0 10px 10px auto; 
 }
 
 .Skills table {
     width: 100%; 
-    max-width: 600px; 
+    max-width: 40vw; 
     margin: 0  auto; 
    
 }
@@ -138,8 +138,10 @@ nav a:hover{
 }
 
 .Skills table img {
+    max-width: 100%; 
+    height: auto; 
     display: block; 
-    margin: 0 10px  20px auto; 
+    margin: 0 auto;
 }
 
 /*--------Proyectos-----------*/
