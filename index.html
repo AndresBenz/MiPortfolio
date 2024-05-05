@@ -10,10 +10,11 @@
 <body>
     <header>
         <div class="Encabezado">
-            <h1><img src="Imagenes/codigo.png" width="10%"></h1>
+            <a href="index.html">
+                <img src="Imagenes/codigo.png" width="10%" alt="Inicio">
+            </a>
             <nav>
                 <ul class="Navegacion">
-                    <li><a href="index.html">Inicio</a></li>
                     <li><a href="#sobreMi">Sobre mi</a></li>
                     <li><a href="#Skills">Skills</a></li>
                     <li><a href="#Proyectos">Proyectos</a></li>
@@ -34,7 +35,7 @@
         </section>
 
         <section id="sobreMi" class="sobreMi">
-            <h2 class="MiInfo">Sobre mi</h2>
+            <h2 class="MiInfo">SOBRE MI</h2>
             <p >Soy estudiante de la Tecnicatura en Programación en la Universidad Tecnológica Nacional (FRGP) y vivo en Buenos Aires, Argentina. 
                 Actualmente estoy realizando una pasantía en Ema Servicios, en el área de verificación de medidores. En mis tiempos libres, trabajo en mantenimiento de parques. 
                 Tambien sigo ampliando mis conocimientos en programación mediante cursos para aprender otros lenguajes y tecnologías.
@@ -42,28 +43,28 @@
         </section>
 
         <section id="Skills" class="Skills">
-            <h3>Skills</h3>
+            <h3>SKILLS</h3> 
             <table>
-                <tr >
-                    <td><img src="Imagenes/c.png" width="50%" alt="c++"></td>
-                    <td><img src="Imagenes/Csharp.png" width="50%" alt="c#"></td>
-                    <td><img src="Imagenes/java.png" width="25%" alt="java"></td>
+                <tr>
+                    <td><img src="Imagenes/c.png" width="100%" alt="c++"></td>
+                    <td><img src="Imagenes/Csharp.png" width="100%" alt="c#"></td>
+                    <td><img src="Imagenes/java.png" width="50%" alt="java"></td>
                 </tr>
                 <tr  style="text-align: center;">
-                    <td><img src="Imagenes/html-5.png" width="50%" alt="html"></td>
-                    <td><img src="Imagenes/css-3.png" width="50%" alt="css"></td>
-                    <td><img src="Imagenes/JavaScript-logo.png" width="23%" alt="javaScript"></td>
+                    <td><img src="Imagenes/html-5.png" width="100%" alt="html"></td>
+                    <td><img src="Imagenes/css-3.png" width="100%" alt="css"></td>
+                    <td><img src="Imagenes/JavaScript-logo.png" width="45%" alt="javaScript"></td>
                 </tr>
 
             </table>
         </section>
 
-        <section id="Proyecto">
-            <h3>Proyectos</h3>
-            <ul id="Proyectos" class="MisProyectos">
+        <section class="MisProyectos" id="Proyecto">
+            <h3>PROYECTOS</h3>
+            <ul id="Proyectos" class="LosProyectos">
                 <li>
                     <h2>SimuMesa</h2>
-                    <img src="Imagenes/SimuMesa.png" width="100%" >
+                    <img src="Imagenes/SimuMesa.png" width="30%" >
                     <p class="SimuMesa"> Utilizando archivos en C++, SimuMesa simplifica el almacenamiento y la recuperación de datos importantes del restaurante, como menús, horarios de reserva y registros de pedidos. 
                         Esto asegura una gestión confiable y segura de la información, lo que permite a los propietarios de restaurantes acceder y modificar fácilmente los datos necesarios para optimizar sus operaciones.</p>
                     
@@ -71,7 +72,7 @@
                 </li>
                 <li>
                     <h2>PlantasSabias</h2>
-                    <img src="Imagenes/PlantaSabias.png" width="100%">
+                    <img src="Imagenes/PlantaSabias.png" width="30%">
                     <p class="PlantaSabias">Plantas Sabias es un proyecto de aprendizaje y comercio  diseñado en HTML y CSS. Este sitio web ofrece una plataforma educativa sobre jardinería.  Además, ofrece una selección de 
                         productos para el cuidado de las plantas y herramientas de jardinería.</p>
                     
@@ -79,7 +80,7 @@
                 </li>
                 <li> 
                     <h2>Gestión de artículos</h2>
-                    <img src="Imagenes/TpWinform.png" width="100%" >
+                    <img src="Imagenes/TpWinform.png" width="30%" >
                     <p class="TpWinform">Es una aplicación de escritorio desarrollada utilizando C#, SQL Server y  .NET Framework. Esta aplicación , proporciona  una herramienta  para optimizar sus operaciones de gestión de inventario y 
                         mejorar la eficiencia en el manejo de sus productos. </p>
                     
@@ -89,6 +90,8 @@
         </section>
 
         <section id="contacto" class="Contacto" >
+            <h3>Contacto</h3>
+           <div class="Formulario">
             <form>
                 <label for="nombreApellido">Nombre y Apellido</label>
                 <input type="text" id="nombreApellido" class="input-padron" required >
@@ -102,7 +105,9 @@
                 <label for="Mensaje">Mensaje</label>
                 <textarea name="" id="Mensaje" cols="50" rows="15" class="input-padron"></textarea>
 
+                <input type="submit" value="Enviar formulario" class="enviar">
             </form>
+         </div>
         </section>
 
         
@@ -112,8 +117,12 @@
 
     <footer>
         <h3 id="Redes">Mis Redes</h3>
-        <img src="Imagenes/github.png" alt="github">
-        <img src="Imagenes/linkedin.png" alt="linkedin">
+        <a href="https://github.com/AndresBenz" target="_blank">
+            <img src="Imagenes/github.png" alt="github">
+        </a>
+        <a href="https://www.linkedin.com/in/andres-esteban-benitez" target="_blank">
+            <img id="linkedin-icon" src="Imagenes/linkedin.png" alt="linkedin">
+        </a>
     </footer>
 
 

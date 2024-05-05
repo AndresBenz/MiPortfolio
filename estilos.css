@@ -1,5 +1,7 @@
 
 body{
+    background-image: linear-gradient(to bottom, #4B6CB7, #8F96AC);
+    color: #ffffff;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: <weight>;
@@ -8,8 +10,12 @@ body{
 
 /*-----ENCABEZADO-----------*/
 header{
-    background-color: #5b6b96;
+    background-color: #4B6CB7;
     padding: 10px 50;
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    z-index: 1000; 
 }
 
 .Encabezado{
@@ -48,9 +54,11 @@ nav a:hover{
 /*-------------MAIN----------------*/
 /*----------Bienvenida------------*/
 .Bienvenida{
-    margin-bottom: 100px;
+    margin-top: 150px;
+    margin-bottom: 50px;
     font-size: 2em;
-    color: #494ce6;
+    color: #9dbdf8;
+    font-weight: bold; 
 }
 
 .Comienzo {
@@ -59,7 +67,7 @@ nav a:hover{
 }
 
 .fotoPresentacion {
-    margin-top: 130px;
+    margin-top: 230px;
     margin-right: 90px; 
     margin-left: 150px; 
    
@@ -78,9 +86,10 @@ nav a:hover{
 
 
 .MiInfo{
+    font-weight: bold; 
     margin-bottom: 50px;
     font-size: 2em;
-    color: #494ce6;
+    color: #9dbdf8;
     display: inline-block;
 }
 
@@ -97,3 +106,187 @@ nav a:hover{
 }
 
 /*--------Skills-----------*/
+
+.Skills{
+    font-weight: bold; 
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 2em;
+    color: #9dbdf8;
+    display: inline-block;
+    text-align: center;
+}
+
+
+.Skills table {
+    width: 100%; 
+    max-width: 600px; 
+    margin: 0  420px auto; 
+}
+
+.Skills h3 {
+    margin-top: 50px;
+    margin-bottom: 50px; 
+}
+
+.Skills table img {
+    display: block; 
+    margin: 50px  20px auto; 
+}
+
+/*--------Proyectos-----------*/
+
+.MisProyectos h3 {
+    font-weight: bold; 
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 2em;
+    color: #9dbdf8;
+    text-align: center; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 50%; 
+}
+
+.MisProyectos h2 {
+    font-weight: bold; 
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #ffffff;
+    text-align: center; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 50%; 
+}
+
+.LosProyectos li {
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.LosProyectos li p {
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+    width: 100%; 
+    max-width: 600px; 
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+.LosProyectos li img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%; 
+    height: auto; 
+    transition: transform 0.3s ease; 
+    border-radius: 10px; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); 
+}
+
+.LosProyectos li img:hover {
+    transform: scale(1.1); 
+}
+
+/*--------Contacto-----------*/
+
+.Contacto h3 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 2em;
+    color: #ffffff;
+    text-align: center; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 50%; 
+}
+
+.Formulario {
+    width: 50%; 
+    margin: 40px auto; 
+    padding: 20px; 
+    border: 1px solid #ccc; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+form {
+    width: 100%; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+}
+
+form label, form legend{ 
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.input-padron{
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 50%;
+}
+
+
+.checkbox{
+    margin: 20px 0;
+}
+
+.enviar{
+    width: 30%;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: #4B6CB7;
+    border: none;
+    border-radius: 5px;
+    margin: 0 40px;
+    transition: 1s all;
+    cursor: pointer;
+}
+
+
+.enviar:hover{
+    background: #4B6CB7;
+    transform: scale(1.2);
+    
+}
+
+
+/*--------Footer------------------*/
+
+.Redes {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 2em;
+    color: #202152;
+    text-align: center; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 50%; 
+}
+
+footer {
+    background-color: #4B6CB7; 
+    padding: 20px; 
+    text-align: center; 
+}
+
+#Redes {
+    margin-bottom: 10px; 
+}
+
+footer img {
+    width: 60px; 
+    margin: 0 10px; 
+}
+
+#linkedin-icon {
+    margin-left: 50px; 
+    margin-top: 40px;
+}
