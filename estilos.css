@@ -113,25 +113,33 @@ nav a:hover{
     margin-bottom: 50px;
     font-size: 2em;
     color: #9dbdf8;
-    display: inline-block;
     text-align: center;
 }
 
+.Skills table img[alt="java"],
+.Skills table img[alt="javaScript"] {
+    width: 170px; 
+    margin: 0 10px 20px auto; 
+}
 
 .Skills table {
     width: 100%; 
     max-width: 600px; 
-    margin: 0  420px auto; 
+    margin: 0  auto; 
+   
 }
 
 .Skills h3 {
     margin-top: 50px;
-    margin-bottom: 50px; 
+    margin-bottom: 20px; 
+}
+.Skills table td {
+    padding: 10px;
 }
 
 .Skills table img {
     display: block; 
-    margin: 50px  20px auto; 
+    margin: 0 10px  20px auto; 
 }
 
 /*--------Proyectos-----------*/
