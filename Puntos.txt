@@ -1,0 +1,7 @@
+Menú.
+Presentación inicial con foto.
+Información general.
+Conocimientos.
+Proyectos.
+Redes.
+Formulario de contacto.

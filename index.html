@@ -9,31 +9,30 @@
 </head>
 <body>
     <header>
-        
-        <div class="Corchetes"> 
-
-            <h1><img src="Imagenes/codigo.png" width="15%"></h1>
-
-            <nav><!--Panel de navegacion -->
-                
+        <div class="Encabezado">
+            <h1><img src="Imagenes/codigo.png" width="10%"></h1>
+            <nav>
                 <ul class="Navegacion">
                     <li><a href="index.html">Inicio</a></li>
-                    <li><a href="#Bienvenida">Bienvenida</a></li>
-                    
+                    <li><a href="#sobreMi">Sobre mi</a></li>
+                    <li><a href="#Skills">Skills</a></li>
+                    <li><a href="#Proyectos">Proyectos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="#Redes">Redes</a></li>
                 </ul>
             </nav>
-
         </div>
     </header>
 
     <main>
         <section class="Comienzo">
+            
             <h2 class="Bienvenida"> Andres Esteban Benitez </h2>
             <p>Bienvenido a mi portafolio! Soy Andres. En este espacio, vas a poder explorar mi trabajo y descubrir cómo mis habilidades pueden agregar valor a tus ideas y proyectos</p>
-
+            <img class="fotoPresentacion" src="Imagenes/foto.png" alt="foto">
         </section>
 
-        <section class="sobreMi">
+        <section id="sobreMi" class="sobreMi">
             <h2 class="MiInfo">Sobre mi</h2>
             <p >Soy estudiante de la Tecnicatura en Programación en la Universidad Tecnológica Nacional (FRGP) y vivo en Buenos Aires, Argentina. 
                 Actualmente estoy realizando una pasantía en Ema Servicios, en el área de verificación de medidores. En mis tiempos libres, trabajo en mantenimiento de parques. 
@@ -41,23 +40,54 @@
             </p>
         </section>
 
-        <section class="Skills">
+        <section id="Skills" class="Skills">
             <h3>Skills</h3>
             <table>
-                <tr>
-                    <td><img src="Imagenes/c++.png" alt="c++"></td>
-                    <td><img src="Imagenes/csharp.png" alt="c#"></td>
-                    <td><img src="Imagenes/java.png" alt="java"></td>
+                <tr >
+                    <td><img src="Imagenes/c.png" width="" alt="c++"></td>
+                    <td><img src="Imagenes/Csharp.png" width="" alt="c#"></td>
+                    <td><img src="Imagenes/java.png" width="" alt="java"></td>
                 </tr>
-                <tr>
-                    <td><img src="Imagenes/html.png" alt="html"></td>
-                    <td><img src="Imagenes/css.png" alt="css"></td>
+                <tr  style="text-align: center;">
+                    <td><img src="Imagenes/html-5.png" alt="html"></td>
+                    <td><img src="Imagenes/css-3.png" alt="css"></td>
+                    <td><img src="Imagenes/JavaScript-logo.png" alt="javaScript"></td>
                 </tr>
 
             </table>
         </section>
 
-        <section class="Contacto">
+        <section>
+            <h3>Proyectos</h3>
+            <ul id="Proyectos" class="MisProyectos">
+                <li>
+                    <h2>SimuMesa</h2>
+                    <img src="Imagenes/SimuMesa.png" width="100%" >
+                    <p class="SimuMesa"> Utilizando archivos en C++, SimuMesa simplifica el almacenamiento y la recuperación de datos importantes del restaurante, como menús, horarios de reserva y registros de pedidos. 
+                        Esto asegura una gestión confiable y segura de la información, lo que permite a los propietarios de restaurantes acceder y modificar fácilmente los datos necesarios para optimizar sus operaciones.</p>
+                    
+                    
+                </li>
+                <li>
+                    <h2>PlantasSabias</h2>
+                    <img src="Imagenes/PlantaSabias.png" width="100%">
+                    <p class="PlantaSabias">Plantas Sabias es un proyecto de aprendizaje y comercio  diseñado en HTML y CSS. Este sitio web ofrece una plataforma educativa sobre jardinería.  Además, ofrece una selección de 
+                        productos para el cuidado de las plantas y herramientas de jardinería.</p>
+                    
+                    
+                </li>
+                <li> 
+                    <h2>Gestión de artículos</h2>
+                    <img src="Imagenes/TpWinform.png" width="100%" >
+                    <p class="TpWinform">Es una aplicación de escritorio desarrollada utilizando C#, SQL Server y  .NET Framework. Esta aplicación , proporciona  una herramienta  para optimizar sus operaciones de gestión de inventario y 
+                        mejorar la eficiencia en el manejo de sus productos. </p>
+                    
+                    
+                </li>
+            </ul>
+        </section>
+
+        <section id="contacto" class="Contacto" >
             <form>
                 <label for="nombreApellido">Nombre y Apellido</label>
                 <input type="text" id="nombreApellido" class="input-padron" required >
@@ -80,7 +110,7 @@
 
 
     <footer>
-        <h3>Mis Redes</h3>
+        <h3 id="Redes">Mis Redes</h3>
         <img src="Imagenes/github.png" alt="github">
         <img src="Imagenes/linkedin.png" alt="linkedin">
     </footer>

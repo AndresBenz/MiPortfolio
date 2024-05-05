@@ -1,14 +1,33 @@
-body {
-    font-family: "Roboto", sans-serif; 
-    font-size: 16px; 
-    font-weight: 400; 
-    font-style: normal; 
+
+body{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
 }
 
+/*-----ENCABEZADO-----------*/
 header{
-    background-color: #d3d0eca2;
+    background-color: #5b6b96;
+    padding: 10px 50;
 }
 
+.Encabezado{
+    width: 940px;
+    position: relative;
+    margin: 15 auto;
+}
+
+nav {
+    position:absolute;
+    top: 40px;
+    right: -350px;
+}
+
+nav li{
+    display: inline;
+    margin: 0 0 0 30px;
+}
 
 nav a{
     text-transform: uppercase;
@@ -19,60 +38,11 @@ nav a{
 
 }
 
-nav {
-    position: absolute;
-    top: 60px;
-    right: 10px;
-}
-
-
-
-nav li{
-    display:inline;
-    margin: 0 0 0 15px;
-}
-
-
 nav a:hover{
-    color: #422bc7;
+    color: #c78c19;
+    
 }
 
+/*-------------------------------------*/
 
-.Bienvenida, .MiInfo{
-    padding-left: 10%; 
-    font-size: 24px; 
-    font-weight: bold;
-    color: #056d53; 
-    text-transform: uppercase; 
-    letter-spacing: 2px; 
-}
-
-
-.Comienzo, .sobreMi {
-    max-width: 800px; 
-    margin: 0 auto; 
-    padding: 20px; 
-    text-align: center; 
-}
-
-
-
-
-
-
-
-
-
-form{
-    margin: 40px 25%;
-}
-
-form label, form legend{ 
-    display: block;
-    font-size: 20px;
-    margin: 0 0 10px;
-}
-
-footer{
-    background-color: #43c46ea2;
-}
+/*-------------MAIN----------------*/
