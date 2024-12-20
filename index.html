@@ -15,11 +15,11 @@
             </a>
             <nav>
                 <ul class="Navegacion">
-                    <li><a href="index.html">Sobre mi</a></li>
-                    <li><a href="Skills.html">Skills</a></li>
-                    <li><a href="MisProyectos.html">Proyectos</a></li>
-                    <li><a href="Contacto.html">Contacto</a></li>
-                   
+                    <li><a href="#sobreMi">Sobre mi</a></li>
+                    <li><a href="#Skills">Skills</a></li>
+                    <li><a href="#Proyectos">Proyectos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="#Redes">Redes</a></li>
                 </ul>
             </nav>
         </div>
@@ -27,10 +27,20 @@
 
     <main>
         <section class="Comienzo">
-            <img class="fotoPresentacion" src="Imagenes/foto.png" alt="foto">
             <div class="texto">
                 <h2 class="Bienvenida">Andres Esteban Benitez</h2>
                 <p>Bienvenido a mi portafolio! Soy Andres. En este espacio, vas a poder explorar mi trabajo y descubrir cómo mis habilidades pueden agregar valor a tus ideas y proyectos</p>
+            </div>
+            <div class="fotoPresentacion">
+                <svg class="foto__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="maskFoto" mask-type="alpha">
+                        <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                    </mask>
+                    <g mask="url(#maskFoto)">
+                        <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                        <image class="foto__blob-img" x="0" y="-110" href="Imagenes/foto.jpg" width="480" height="800"/>
+                    </g>
+                </svg>
             </div>
         </section>
 
@@ -42,21 +52,91 @@
             </p>
         </section>
 
+        <section id="Skills" class="Skills">
+            <h3>SKILLS</h3> 
+            <table>
+                <tr>
+                    <td><img src="Imagenes/c.png" width="100%" alt="c++"></td>
+                    <td><img src="Imagenes/csharpU.png" width="100%" alt="c#"></td>
+                    <td><img src="Imagenes/java.png" width="100%" alt="java"></td>
+                </tr>
+                <tr  style="text-align: center;">
+                    <td><img src="Imagenes/html-5.png" width="100%" alt="html"></td>
+                    <td><img src="Imagenes/css-3.png" width="100%" alt="css"></td>
+                    <td><img src="Imagenes/JavaScript-logo.png" width="100%" alt="javaScript"></td>
+                </tr>
+
+            </table>
+        </section>
+
+        <section class="MisProyectos" id="Proyecto">
+            <h3>PROYECTOS</h3>
+            <ul id="Proyectos" class="LosProyectos">
+                <li>
+                    <h2>SimuMesa</h2>
+                    <img src="Imagenes/SimuMesa.png" width="30%" >
+                    <p class="SimuMesa"> Utilizando archivos en C++, SimuMesa simplifica el almacenamiento y la recuperación de datos importantes del restaurante, como menús, horarios de reserva y registros de pedidos. 
+                        Esto asegura una gestión confiable y segura de la información, lo que permite a los propietarios de restaurantes acceder y modificar fácilmente los datos necesarios para optimizar sus operaciones.</p>
+                    
+                    
+                </li>
+                <li>
+                    <h2>PlantasSabias</h2>
+                    <img src="Imagenes/PlantaSabias.png" width="30%">
+                    <p class="PlantaSabias">Plantas Sabias es un proyecto de aprendizaje y comercio  diseñado en HTML y CSS. Este sitio web ofrece una plataforma educativa sobre jardinería.  Además, ofrece una selección de 
+                        productos para el cuidado de las plantas y herramientas de jardinería.</p>
+                    
+                    
+                </li>
+                <li> 
+                    <h2>Gestión de artículos</h2>
+                    <img src="Imagenes/TpWinform.png" width="30%" >
+                    <p class="TpWinform">Es una aplicación de escritorio desarrollada utilizando C#, SQL Server y  .NET Framework. Esta aplicación , proporciona  una herramienta  para optimizar sus operaciones de gestión de inventario y 
+                        mejorar la eficiencia en el manejo de sus productos. </p>
+                    
+                    
+                </li>
+            </ul>
+        </section>
+
+        <section id="contacto" class="Contacto" >
+            <h3>Contacto</h3>
+           <div class="Formulario">
+            <form>
+                <label for="nombreApellido">Nombre y Apellido</label>
+                <input type="text" id="nombreApellido" class="input-padron" required >
+
+                <label for="correoElectronico">Correo Electronico</label>
+                <input type="email" id="correoElectronico" class="input-padron" required placeholder="email@dominio.com">
+
+                <label for="telefono">Telefono</label>
+                <input type="tel" id="telefono" class="input-padron" required placeholder="(xx) xxxx xxxx">
+
+                <label for="Mensaje">Mensaje</label>
+                <textarea name="" id="Mensaje" cols="50" rows="15" class="input-padron"></textarea>
+
+                <input type="submit" value="Enviar formulario" class="enviar">
+            </form>
+         </div>
+        </section>
+
+        
+
     </main>
-        <footer>
-            <h3 id="Redes">Mis Redes</h3>
-            <a href="https://github.com/AndresBenz" target="_blank">
-                <img src="Imagenes/github.png" alt="github">
-            </a>
-            <a href="https://www.linkedin.com/in/andres-esteban-benitez" target="_blank">
-                <img id="linkedin-icon" src="Imagenes/linkedin.png" alt="linkedin">
-            </a>
-        </footer>
 
 
+    <footer>
+        <h3 id="Redes">Mis Redes</h3>
+        <a href="https://github.com/AndresBenz" target="_blank">
+            <img src="Imagenes/github.png" alt="github">
+        </a>
+        <a href="https://www.linkedin.com/in/andres-esteban-benitez" target="_blank">
+            <img id="linkedin-icon" src="Imagenes/linkedin.png" alt="linkedin">
+        </a>
+    </footer>
 
-   
 
-
+    <script src="Js/scripts.js"></script>
 </body>
+
 </html>
