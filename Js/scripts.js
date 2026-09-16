@@ -1,4 +1,3 @@
-JavaScript
 document.addEventListener("DOMContentLoaded", () => {
     const { personal, skills, proyectos, redes } = portfolioData;
 
@@ -10,6 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (elSaludo) elSaludo.textContent = personal.saludo;
     if (elSobreMi) elSobreMi.textContent = personal.sobreMi;
 
+     // SKILLS
+
     const skillsContainer = document.getElementById("skills-container");
     if (skillsContainer) {
         skillsContainer.innerHTML = skills.map(skill => `
@@ -18,6 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
         `).join("");
     }
+
+    // PROYECTOS
 
     const proyectosContainer = document.getElementById("proyectos-container");
     if (proyectosContainer) {
@@ -37,9 +40,164 @@ document.addEventListener("DOMContentLoaded", () => {
         `).join("");
     }
 
+  // REDES
+
     const linkGithub = document.getElementById("link-github");
     const linkLinkedin = document.getElementById("link-linkedin");
 
     if (linkGithub) linkGithub.href = redes.github;
     if (linkLinkedin) linkLinkedin.href = redes.linkedin;
+
+    //PARTÍCULAS
+
+     particlesJS("particles-js", {
+
+        
+
+        particles: {
+
+            number: {
+                value: 120,
+
+                density: {
+                    enable: true,
+                    value_area: 900
+                }
+            },
+
+
+        
+            color: {
+                value: ["#3498db", "#ff4054", "#ffffff"]
+            },
+
+
+         
+            shape: {
+                type: "circle"
+            },
+
+
+         
+
+            opacity: {
+                value: 0.5,
+                random: true
+            },
+
+
+           
+            size: {
+                value: 2,
+                random: true
+            },
+
+
+           
+            line_linked: {
+
+                
+                enable: true,
+
+             
+                distance: 140,
+
+                
+                color: "#3498db",
+
+                
+                opacity: 0.3,
+
+                
+                width: 1
+            },
+
+
+           
+
+            move: {
+
+                enable: true,
+
+                
+                speed: 0.8,
+
+               
+                random: true,
+
+              
+                straight: false,
+
+               
+                out_mode: "out"
+            }
+        },
+
+
+       
+        // INTERACCIÓN CON EL MOUSE
+       
+
+        interactivity: {
+
+            detect_on: "window",
+
+            events: {
+
+               
+                onhover: {
+
+                    enable: true,
+
+                  
+                    mode: "grab"
+                },
+
+                
+                onclick: {
+
+                    enable: true,
+
+                   
+                    mode: "push"
+                },
+
+                resize: true
+            },
+
+
+            modes: {
+
+               
+               
+
+                grab: {
+
+                   
+                    distance: 180,
+
+                    line_linked: {
+
+                       
+                        opacity: 0.8
+                    }
+                },
+
+
+                
+
+                push: {
+
+                    particles_nb: 4
+                }
+            }
+        },
+
+
+      
+        retina_detect: true
+
+    });
+
+
 });

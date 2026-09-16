@@ -1,326 +1,48 @@
-
-body{
-    background-image: linear-gradient(to bottom, #4B6CB7, #8F96AC);
-    color: #ffffff;
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
+body {
+    margin: 0;
+    padding: 0;
+    background-color: oklch(12.9% 0.042 264.695);
 }
 
+.hero {
 
-/*-----ENCABEZADO-----------*/
-header{
+  
+    min-height: 100vh;
 
-    background-color: #4B6CB7;
-    padding: 10px 50;
-    position: fixed; 
-    top: 0; 
-    width: 100%; 
-    z-index: 1000; 
-   
-}
-
-.Encabezado{
-    width: 940px;
+  
     position: relative;
-    margin: 15 auto;
-}
 
-nav {
-    position:absolute;
-    top: 40px;
-    right: -350px;
-}
+    overflow: hidden;
 
-nav li{
-    display: inline;
-    margin: 0 0 0 30px;
-}
-
-nav a{
-    text-transform: uppercase;
-    color: #000000;
-    font-weight: bold;
-    font-size: 22px;
-    text-decoration: none; 
-
-}
-
-nav a:hover{
-    color: #c78c19;
-    
-}
-
-
-/*-------------------------------------*/
-
-/*-------------MAIN----------------*/
-
-main {
-    margin-top: 80px;
-}
-
-/*----------Bienvenida------------*/
-.Bienvenida{
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #9dbdf8;
-    font-weight: bold;
-}
-
-.Comienzo {
-    display: flex;
+     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 50px;
-    padding: 50px 5%;
-    margin: 50px auto;
-    max-width: 1200px;
-    box-sizing: border-box;
+    justify-content: center;
 }
 
-.fotoPresentacion {
-    width: 350px;
-    height: 350px;
-}
 
-.foto__blob {
+#particles-js {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
     width: 100%;
     height: 100%;
-    overflow: hidden;
+
+    z-index: 0;
 }
 
-.foto__blob-img {
-    object-fit: cover;
-}
 
-.texto {
-    flex: 1; 
-    max-width: 600px; 
-    text-align: left;
-}
+.hero-texto {
+    position: relative;
+    z-index: 1;
 
-.texto p {
-    margin-top: 50px; 
-}
-
-/*--------Sobre Mi-----------*/
-
-
-
-.MiInfo{
-    font-weight: bold; 
-    margin-bottom: 50px;
-    font-size: 2em;
-    color: #9dbdf8;
-    display: inline-block;
-}
-
-.sobreMi {
-    margin-top: 200px;
-    text-align: center; 
-    max-width: 800px; 
-    margin-left: auto; 
-    margin-right: auto; 
-}
-
-.sobreMi p {
-    margin-top: 20px; 
-}
-
-/*--------Skills-----------*/
-
-.Skills{
-    font-weight: bold; 
-    margin-top: 50px;
-    margin-bottom: 50px;
-    font-size: 2em;
-    color: #9dbdf8;
     text-align: center;
-}
-
-.Skills table img[alt="java"],
-.Skills table img[alt="javaScript"] {
-    width: 350px; 
-    margin: 0 10px 10px auto; 
-}
-
-.Skills table {
-    width: 100%; 
-    max-width: 40vw; 
-    margin: 0  auto; 
-   
-}
-
-.Skills h3 {
-    margin-top: 50px;
-    margin-bottom: 20px; 
-}
-.Skills table td {
-    padding: 10px;
-}
-
-.Skills table img {
-    max-width: 100%; 
-    height: auto; 
-    display: block; 
-    margin: 0 auto;
-}
-
-/*--------Proyectos-----------*/
-
-.MisProyectos h3 {
-    font-weight: bold; 
-    margin-top: 50px;
-    margin-bottom: 50px;
-    font-size: 2em;
-    color: #9dbdf8;
-    text-align: center; 
-    margin-left: auto; 
-    margin-right: auto; 
-    width: 50%; 
-}
-
-.MisProyectos h2 {
-    font-weight: bold; 
-    margin-top: 50px;
-    margin-bottom: 20px;
-    font-size: 1.5em;
-    color: #ffffff;
-    text-align: center; 
-    margin-left: auto; 
-    margin-right: auto; 
-    width: 50%; 
-}
-
-.LosProyectos li {
-    display: block;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.LosProyectos li p {
-    margin-top: 20px; 
-    margin-bottom: 20px; 
-    width: 100%; 
-    max-width: 600px; 
-    margin-left: auto; 
-    margin-right: auto; 
-}
-
-.LosProyectos li img {
-    display: block;
-    margin: 0 auto;
-    max-width: 100%; 
-    height: auto; 
-    transition: transform 0.3s ease; 
-    border-radius: 10px; 
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); 
-}
-
-.LosProyectos li img:hover {
-    transform: scale(1.1); 
-}
-
-/*--------Contacto-----------*/
-
-.Contacto h3 {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    font-size: 2em;
-    color: #ffffff;
-    text-align: center; 
-    margin-left: auto; 
-    margin-right: auto; 
-    width: 50%; 
-}
-
-.Formulario {
-    width: 50%; 
-    margin: 40px auto; 
-    padding: 20px; 
-    border: 1px solid #ccc; 
-    border-radius: 10px; 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-}
-
-form {
-    width: 100%; 
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-}
-
-form label, form legend{ 
-    display: block;
-    font-size: 20px;
-    margin: 0 0 10px;
-}
-
-.input-padron{
-    display: block;
-    margin: 0 0 20px;
-    padding: 10px 25px;
-    width: 50%;
-}
-
-
-.checkbox{
-    margin: 20px 0;
-}
-
-.enviar{
-    width: 30%;
-    padding: 15px 0;
-    font-size: 18px;
-    font-weight: bold;
     color: white;
-    background: #4B6CB7;
-    border: none;
-    border-radius: 5px;
-    margin: 0 40px;
-    transition: 1s all;
-    cursor: pointer;
 }
 
 
-.enviar:hover{
-    background: #4B6CB7;
-    transform: scale(1.2);
-    
-}
-
-
-/*--------Footer------------------*/
-
-.Redes {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    font-size: 2em;
-    color: #202152;
-    text-align: center; 
-    margin-left: auto; 
-    margin-right: auto; 
-    width: 50%; 
-}
-
-footer {
-    background-color: #4B6CB7; 
-    padding: 20px; 
-    text-align: center; 
-}
-
-#Redes {
-    margin-bottom: 10px; 
-}
-
-footer img {
-    width: 60px; 
-    margin: 0 10px; 
-}
-
-#linkedin-icon {
-    margin-left: 50px; 
-    margin-top: 40px;
+.hero-foto {
+    position: relative;
+    z-index: 1;
 }

@@ -1,4 +1,4 @@
-JavaScript
+
 const portfolioData = {
     personal: {
         nombre: "Andres Esteban Benitez",
