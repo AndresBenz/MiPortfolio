@@ -57,11 +57,11 @@ document.addEventListener("DOMContentLoaded", () => {
         particles: {
 
             number: {
-                value: 120,
+                value: 100,
 
                 density: {
                     enable: true,
-                    value_area: 900
+                    value_area: 600
                 }
             },
 
@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
            
             size: {
-                value: 2,
+                value: 1,
                 random: true
             },
 
@@ -100,13 +100,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 enable: true,
 
              
-                distance: 140,
+                distance: 120,
 
                 
-                color: "#3498db",
+                color: "#cc690c",
 
                 
-                opacity: 0.3,
+                opacity: 0.5,
 
                 
                 width: 1
@@ -120,7 +120,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 enable: true,
 
                 
-                speed: 0.8,
+                speed: 1.6,
+
+                direction: "none",
 
                
                 random: true,
@@ -129,7 +131,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 straight: false,
 
                
-                out_mode: "out"
+                out_mode: "out",
+                bounce: false
             }
         },
 
@@ -174,12 +177,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 grab: {
 
                    
-                    distance: 180,
+                    distance: 220,
 
                     line_linked: {
 
                        
-                        opacity: 0.8
+                        opacity: 0.5
                     }
                 },
 
@@ -188,7 +191,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 push: {
 
-                    particles_nb: 4
+                    particles_nb: 3
                 }
             }
         },
