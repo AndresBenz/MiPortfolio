@@ -1157,5 +1157,468 @@ body {
 
         opacity: 1;
     }
+}
 
+    /* =================================
+   CONTACTO
+================================= */
+
+.contacto {
+    position: relative;
+    min-height: 100vh;
+    padding: 120px 25px;
+    box-sizing: border-box;
+    color: #ffffff;
+}
+
+.contacto-contenedor {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+/* HEADER */
+
+.contacto-subtitulo {
+    display: block;
+    margin-bottom: 10px;
+
+    color: #BFA181;
+
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 5px;
+}
+
+.contacto h2 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: clamp(40px, 5vw, 60px);
+    font-weight: 800;
+}
+
+.contacto h2 #contacto-titulo-destacado {
+    color: #cc690c;
+}
+
+.contacto-linea {
+    width: 65px;
+    height: 3px;
+
+    margin: 20px auto 25px;
+
+    border-radius: 20px;
+
+    background: #cc690c;
+
+    box-shadow:
+        0 0 15px rgba(204, 105, 12, 0.45);
+}
+
+.contacto-descripcion {
+    max-width: 650px;
+
+    margin: 0 auto 55px;
+
+    color: #b9bdc7;
+
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   TARJETA
+========================================= */
+
+.contacto-card {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 0.85fr)
+        minmax(0, 1.15fr);
+
+    width: 100%;
+
+    overflow: hidden;
+
+    text-align: left;
+
+    background: rgba(8, 8, 18, 0.42);
+
+    border:
+        1px solid rgba(204, 105, 12, 0.35);
+
+    border-radius: 24px;
+
+    backdrop-filter: blur(5px);
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================
+   LADO IZQUIERDO
+========================================= */
+
+.contacto-info {
+    padding: 55px 45px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(204, 105, 12, 0.10),
+            rgba(20, 11, 4, 0.18)
+        );
+
+    border-right:
+        1px solid rgba(204, 105, 12, 0.20);
+}
+
+.contacto-mini-titulo {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: #cc690c;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+}
+
+.contacto-info h3 {
+    margin: 0 0 22px;
+
+    color: #ffffff;
+
+    font-size: clamp(30px, 4vw, 43px);
+    font-weight: 800;
+
+    line-height: 1.1;
+}
+
+#contacto-pregunta-destacada {
+    color: #BFA181;
+}
+
+.contacto-info > p {
+    max-width: 400px;
+
+    margin: 0 0 40px;
+
+    color: #aeb2bc;
+
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   REDES
+========================================= */
+
+.contacto-redes {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.contacto-red {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 14px 16px;
+
+    border:
+        1px solid rgba(204, 105, 12, 0.20);
+
+    border-radius: 14px;
+
+    background:
+        rgba(255, 255, 255, 0.025);
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.contacto-red:hover {
+    transform: translateX(5px);
+
+    border-color:
+        rgba(204, 105, 12, 0.65);
+
+    background:
+        rgba(204, 105, 12, 0.08);
+}
+
+
+/* ESTO ARREGLA EL LOGO GIGANTE DE TU CAPTURA */
+
+.contacto-red img {
+    width: 38px !important;
+    height: 38px !important;
+
+    display: block;
+
+    object-fit: contain;
+
+    flex-shrink: 0;
+}
+
+.contacto-red div {
+    flex: 1;
+}
+
+.contacto-red div span {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.contacto-red small {
+    color: #8e929d;
+
+    font-size: 12px;
+}
+
+.contacto-red strong {
+    color: #cc690c;
+
+    font-size: 18px;
+
+    transition: transform 0.3s ease;
+}
+
+.contacto-red:hover strong {
+    transform: translate(3px, -3px);
+}
+
+
+/* =========================================
+   FORMULARIO
+========================================= */
+
+.formulario-contacto {
+    padding: 55px 45px;
+
+    background: transparent;
+}
+
+.formulario-fila {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+}
+
+.campo-grupo {
+    margin-bottom: 20px;
+}
+
+.campo-grupo label {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: #d6d8df;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.campo-grupo input,
+.campo-grupo textarea {
+    width: 100%;
+
+    padding: 14px 16px;
+
+    box-sizing: border-box;
+
+    outline: none;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 12px;
+
+    background:
+        rgba(255, 255, 255, 0.04);
+
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 15px;
+
+    transition:
+        border-color 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.campo-grupo input::placeholder,
+.campo-grupo textarea::placeholder {
+    color: #626773;
+}
+
+.campo-grupo textarea {
+    min-height: 150px;
+
+    resize: vertical;
+}
+
+.campo-grupo input:focus,
+.campo-grupo textarea:focus {
+    border-color: #cc690c;
+
+    background:
+        rgba(204, 105, 12, 0.04);
+
+    box-shadow:
+        0 0 0 3px rgba(204, 105, 12, 0.08);
+}
+
+
+/* =========================================
+   BOTON
+========================================= */
+
+.btn-enviar {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 14px;
+
+    padding: 14px 25px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #cc690c;
+
+    border-radius: 50px;
+
+    background:
+        rgba(204, 105, 12, 0.15);
+
+    color: #ffeedd;
+
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.btn-enviar:hover {
+    transform: translateY(-3px);
+
+    background:
+        rgba(204, 105, 12, 0.30);
+
+    box-shadow:
+        0 8px 30px rgba(204, 105, 12, 0.15);
+}
+
+.btn-enviar span {
+    font-size: 19px;
+
+    transition: transform 0.3s ease;
+}
+
+.btn-enviar:hover span {
+    transform: translateX(5px);
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 850px) {
+
+    .contacto-card {
+        grid-template-columns: 1fr;
+    }
+
+    .contacto-info {
+        border-right: none;
+
+        border-bottom:
+            1px solid rgba(204, 105, 12, 0.20);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .contacto {
+        padding: 100px 15px;
+    }
+
+    .contacto-info,
+    .formulario-contacto {
+        padding: 35px 22px;
+    }
+
+    .formulario-fila {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+}
+
+.pie-pagina {
+    width: 100%;
+    padding: 28px 20px;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background: oklch(12.9% 0.042 264.695);
+
+    border-top: 1px solid rgba(204, 105, 12, 0.15);
+}
+
+.copyright {
+    margin: 0;
+
+    color: #9ca3af;
+
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.7px;
+}
+
+.copyright:hover {
+    color: #BFA181;
+    transition: color 0.3s ease;
 }

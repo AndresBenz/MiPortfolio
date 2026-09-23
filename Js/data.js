@@ -102,9 +102,11 @@ const portfolioData = {
         descripcion: "Sistema web de gestión comercial e inventario para agro/jardinería. Permite administrar productos, ventas, compras, clientes y proveedores, con vistas diferenciadas según el rol del usuario, alertas de stock bajo y generación de reportes en PDF.",
         
         imagenes: [
-            "Imagenes/ProyectaComercio.png",
-            "Imagenes/ProyectaComercio2.png",
-            "Imagenes/ProyectaComercio3.png"
+            "Imagenes/Proyecta comercio.png",
+            "Imagenes/Proyectacomercio1.png",
+            "Imagenes/Proyectacomercio2.png",
+            "Imagenes/Proyectacomercio3.png",
+            "Imagenes/Proyectacomercio4.png"
         ],
 
         tags: ["C#", "ASP.NET", "SQL Server", "Bootstrap"],
@@ -151,6 +153,22 @@ const portfolioData = {
         github: "#"
     }
     ],
+
+    contacto: {
+    subtitulo: "CONTACTO",
+
+    titulo: "Trabajemos",
+    tituloDestacado: "juntos",
+
+    descripcion: "¿Tenés un proyecto, una propuesta o simplemente querés contactarme? Escribime y conversemos.",
+
+    miniTitulo: "HABLEMOS",
+
+    pregunta: "¿Tenés una idea",
+    preguntaDestacada: "en mente?",
+
+    texto: "Estoy abierto a nuevas oportunidades, proyectos y propuestas relacionadas con desarrollo de software."
+},
 
     redes: {
     github: "https://github.com/AndresBenz",
