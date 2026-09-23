@@ -167,7 +167,7 @@ const portfolioData = {
     pregunta: "¿Tenés una idea",
     preguntaDestacada: "en mente?",
 
-    texto: "Estoy abierto a nuevas oportunidades, proyectos y propuestas relacionadas con desarrollo de software."
+    texto: "Si querés contactarme por una oportunidad laboral, proyecto o colaboración, completá el formulario y el mensaje llegará directamente a mi correo."
 },
 
     redes: {

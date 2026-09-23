@@ -4,6 +4,8 @@ body {
     background-color: oklch(12.9% 0.042 264.695);
 }
 
+
+
 .hero {
 
   
@@ -1803,3 +1805,4 @@ body {
 .proyecto-imagen-wrapper:not(.skeleton) .proyecto-imagen {
     opacity: 1;
 }
+

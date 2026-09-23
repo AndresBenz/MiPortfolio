@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const { personal, skills, proyectos, redes } = portfolioData;
+    const { personal, skills, proyectos, contacto, redes,cv } = portfolioData;
 
     const elNombre = document.getElementById("hero-nombre");
     const elSaludo = document.getElementById("hero-saludo");
@@ -64,7 +64,7 @@ if (proyectosContainer) {
             <!-- IMAGEN / CARRUSEL -->
             <div class="proyecto-galeria">
 
-                <<div class="proyecto-imagen-wrapper skeleton">
+                <div class="proyecto-imagen-wrapper skeleton">
 
     <img
         class="proyecto-imagen"
@@ -529,6 +529,79 @@ if (btnCv) {
 
 if (btnCvTexto) {
     btnCvTexto.textContent = cv.texto;
+}
+
+
+// =================================
+// CONTACTO
+// =================================
+
+const contactoSubtitulo =
+    document.getElementById("contacto-subtitulo");
+
+const contactoTitulo =
+    document.getElementById("contacto-titulo");
+
+const contactoTituloDestacado =
+    document.getElementById("contacto-titulo-destacado");
+
+const contactoDescripcion =
+    document.getElementById("contacto-descripcion");
+
+const contactoMiniTitulo =
+    document.getElementById("contacto-mini-titulo");
+
+const contactoPregunta =
+    document.getElementById("contacto-pregunta");
+
+const contactoPreguntaDestacada =
+    document.getElementById("contacto-pregunta-destacada");
+
+const contactoTexto =
+    document.getElementById("contacto-texto");
+
+
+if (contactoSubtitulo)
+    contactoSubtitulo.textContent = contacto.subtitulo;
+
+if (contactoTitulo)
+    contactoTitulo.textContent = contacto.titulo;
+
+if (contactoTituloDestacado)
+    contactoTituloDestacado.textContent = contacto.tituloDestacado;
+
+if (contactoDescripcion)
+    contactoDescripcion.textContent = contacto.descripcion;
+
+if (contactoMiniTitulo)
+    contactoMiniTitulo.textContent = contacto.miniTitulo;
+
+if (contactoPregunta)
+    contactoPregunta.textContent = contacto.pregunta;
+
+if (contactoPreguntaDestacada)
+    contactoPreguntaDestacada.textContent = contacto.preguntaDestacada;
+
+if (contactoTexto)
+    contactoTexto.textContent = contacto.texto;
+
+
+// =================================
+// REDES
+// =================================
+
+const contactoGithub =
+    document.getElementById("contacto-github");
+
+const contactoLinkedin =
+    document.getElementById("contacto-linkedin");
+
+if (contactoGithub) {
+    contactoGithub.href = redes.github;
+}
+
+if (contactoLinkedin) {
+    contactoLinkedin.href = redes.linkedin;
 }
 
 });
