@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <header  class="absolute top-0 left-0 z-50 w-full pt-5 px-4">
+    <header  class="fixed top-0 left-0 z-50 w-full pt-5 px-4">
         <div class="mx-auto w-full max-w-6xl bg-[#140b04]/30 hover:bg-[#140b04]/45 backdrop-blur-2xl border border-[#cc690c]/20 hover:border-[#cc690c]/40 rounded-full px-7 py-3 flex items-center justify-between shadow-[0_8px_30px_rgba(0,0,0,0.25)] hover:shadow-[0_12px_40px_-5px_rgba(204,105,12,0.3)] transition-all duration-500 ease-out">
             
             <a href="index.html" class="group flex items-center gap-3 transition-transform duration-300 ease-out hover:scale-[1.02]">
@@ -36,32 +36,104 @@
 
     <main>
         <section class="hero">
+
              <div id="particles-js"></div>
+
+                <div class="hero-contenido">
+
+                 <div class="hero-foto">
+                   <svg class="foto__blob"
+                    viewBox="0 0 479 467"
+                    xmlns="http://www.w3.org/2000/svg">
+
+                    <defs>
+                        <clipPath id="clipFoto">
+                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                        </clipPath>
+                    </defs>
+
+                    <image
+                    href="Imagenes/foto.png"
+                    x="0"
+                    y="0"
+                    width="479"
+                    height="467"
+                    preserveAspectRatio="xMidYMid slice"
+                    clip-path="url(#clipFoto)"
+                     />
+
+                    <path
+                        class="blob-borde"
+                        d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"
+                    />
+                    </svg>
+
+                 </div>
+
+
+
             <div class="hero-texto">
                 <span class="subtitulo">Desarrollador de Software</span>
+                
                 <h1 id="hero-nombre"></h1>
                 <p id="hero-saludo"></p>
                 <div class="hero-botones">
-                    <a href="#contacto" class="btn btn-primario">Contactar</a>
-                    <a href="#proyectos" class="btn btn-secundario">Ver Proyectos</a>
+                    <a href="#proyectos" class="btn btn-secundario">Ver Proyectos <span >→</span></a>
+                    
                 </div>
             </div>
-            <div class="hero-foto">
-                <svg class="foto__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg">
-                    <mask id="maskFoto" mask-type="alpha">
-                        <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                    </mask>
-                    <g mask="url(#maskFoto)">
-                        <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                        <image class="foto__blob-img" x="0" y="-110" href="Imagenes/foto.jpg" width="480" height="800"/>
-                    </g>
-                </svg>
-            </div>
+                </div>
+         
         </section>
 
+        <div class="contenido-particulas">
+
+    <div id="particles-fondo"></div>
+
         <section id="sobreMi" class="seccion sobre-mi">
-            <h2>Sobre mí</h2>
-            <p id="sobre-mi-texto"></p>
+             <div class="sobre-mi-contenedor">
+
+        <span class="sobre-mi-subtitulo">CONOCEME</span>
+
+        <h2>Sobre mí</h2>
+
+        <div class="sobre-mi-linea"></div>
+
+        <p id="sobre-mi-texto"></p>
+
+        <div class="sobre-mi-datos">
+
+            <div class="dato-card">
+                <span class="dato-icono">🎓</span>
+                <div>
+                    <h3>Formación</h3>
+                    <p>Técnico en Programación</p>
+                    <span>UTN FRGP</span>
+                </div>
+            </div>
+
+            <div class="dato-card">
+                <span class="dato-icono">💻</span>
+                <div>
+                    <h3>Enfoque</h3>
+                    <p>Desarrollo Backend</p>
+                    <span>.NET / C#</span>
+                </div>
+            </div>
+
+            <div class="dato-card">
+                <span class="dato-icono">⚡</span>
+                <div>
+                    <h3>Objetivo</h3>
+                    <p>Desarrollador Junior</p>
+                    <span>Aprendizaje continuo</span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
         </section>
 
         <section id="skills" class="seccion skills">
@@ -98,7 +170,7 @@
             </form>
         </section>
 
-        
+        <div>
 
     </main>
 

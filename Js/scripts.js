@@ -203,4 +203,77 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
+particlesJS("particles-fondo", {
+
+    particles: {
+
+        number: {
+            value: 100,
+            density: {
+                enable: true,
+                value_area: 900
+            }
+        },
+
+        color: {
+            value: "#cc690c"
+        },
+
+        shape: {
+            type: "circle"
+        },
+
+        opacity: {
+            value: 0.35,
+            random: true
+        },
+
+        size: {
+            value: 1,
+            random: true
+        },
+
+        line_linked: {
+            enable: true,
+            distance: 110,
+            color: "#cc690c",
+            opacity: 0.35,
+            width: 1
+        },
+
+        move: {
+            enable: true,
+            speed: 0.8,
+            direction: "none",
+            random: false,
+            straight: false,
+            out_mode: "out",
+            bounce: false
+        }
+    },
+
+
+    // SIN INTERACCIÓN CON EL MOUSE
+    interactivity: {
+
+        detect_on: "canvas",
+
+        events: {
+
+            onhover: {
+                enable: false
+            },
+
+            onclick: {
+                enable: false
+            },
+
+            resize: true
+        }
+    },
+
+
+    retina_detect: true
+
+});
 });
