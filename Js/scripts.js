@@ -54,22 +54,229 @@ if (sobreMiDatos) {
     // PROYECTOS
 
     const proyectosContainer = document.getElementById("proyectos-container");
-    if (proyectosContainer) {
-        proyectosContainer.innerHTML = proyectos.map(proy => `
-            <article class="proyecto-card">
-                <div class="proyecto-imagen-container">
-                    <img src="${proy.imagen}" alt="${proy.titulo}">
+
+if (proyectosContainer) {
+
+    proyectosContainer.innerHTML = proyectos.map((proy, index) => `
+
+        <article class="proyecto-item ${index % 2 !== 0 ? "proyecto-invertido" : ""}">
+
+            <!-- IMAGEN / CARRUSEL -->
+            <div class="proyecto-galeria">
+
+                <div class="proyecto-imagen-wrapper">
+
+                    <img
+                        class="proyecto-imagen"
+                        src="${proy.imagenes[0]}"
+                        alt="${proy.titulo}"
+                        data-proyecto="${index}"
+                        data-imagen="0"
+                    >
+
+                    ${proy.imagenes.length > 1 ? `
+
+                        <button 
+                            class="proyecto-flecha proyecto-anterior"
+                            data-proyecto="${index}"
+                            aria-label="Imagen anterior"
+                        >
+                            ‹
+                        </button>
+
+                        <button 
+                            class="proyecto-flecha proyecto-siguiente"
+                            data-proyecto="${index}"
+                            aria-label="Imagen siguiente"
+                        >
+                            ›
+                        </button>
+
+                    ` : ""}
+
                 </div>
-                <div class="proyecto-contenido">
-                    <h4>${proy.titulo}</h4>
-                    <p>${proy.descripcion}</p>
+
+                <!-- INDICADORES -->
+                <div class="proyecto-indicadores">
+
+                    ${proy.imagenes.map((_, imgIndex) => `
+                        <button
+                            class="proyecto-punto ${imgIndex === 0 ? "activo" : ""}"
+                            data-proyecto="${index}"
+                            data-imagen="${imgIndex}"
+                            aria-label="Ver imagen ${imgIndex + 1}"
+                        ></button>
+                    `).join("")}
+
                 </div>
+
+            </div>
+
+
+            <!-- INFORMACIÓN -->
+            <div class="proyecto-info">
+
+                <div class="proyecto-numero">
+                    ${String(index + 1).padStart(2, "0")}
+                    <span></span>
+                </div>
+
+                <h3>${proy.titulo}</h3>
+
+                <p>${proy.descripcion}</p>
+
                 <div class="proyecto-tags">
-                    ${proy.tags.map(tag => `<span class="tag">${tag}</span>`).join("")}
+
+                    ${proy.tags.map(tag => `
+                        <span>${tag}</span>
+                    `).join("")}
+
                 </div>
-            </article>
-        `).join("");
+
+                <div class="proyecto-botones">
+
+                    <a 
+                        href="${proy.github}" 
+                        target="_blank"
+                        class="proyecto-btn proyecto-btn-github"
+                    >
+                        GitHub ↗
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    `).join("");
+
+
+    // ===============================
+    // CARRUSEL
+    // ===============================
+
+    function cambiarImagen(proyectoIndex, nuevaImagen) {
+
+        const proyecto = proyectos[proyectoIndex];
+
+        if (!proyecto) return;
+
+        const totalImagenes = proyecto.imagenes.length;
+
+        // Permite pasar de última -> primera
+        // y de primera -> última
+        nuevaImagen =
+            (nuevaImagen + totalImagenes) % totalImagenes;
+
+
+        const imagen = document.querySelector(
+            `.proyecto-imagen[data-proyecto="${proyectoIndex}"]`
+        );
+
+        if (!imagen) return;
+
+
+        // pequeña animación
+        imagen.classList.add("cambiando");
+
+
+        setTimeout(() => {
+
+            imagen.src = proyecto.imagenes[nuevaImagen];
+            imagen.dataset.imagen = nuevaImagen;
+
+            imagen.classList.remove("cambiando");
+
+        }, 150);
+
+
+        // actualizar puntitos
+
+        document.querySelectorAll(
+            `.proyecto-punto[data-proyecto="${proyectoIndex}"]`
+        ).forEach((punto, index) => {
+
+            punto.classList.toggle(
+                "activo",
+                index === nuevaImagen
+            );
+
+        });
     }
+
+
+    // FLECHA SIGUIENTE
+
+    document.querySelectorAll(".proyecto-siguiente")
+        .forEach(boton => {
+
+            boton.addEventListener("click", () => {
+
+                const proyectoIndex =
+                    Number(boton.dataset.proyecto);
+
+                const imagen = document.querySelector(
+                    `.proyecto-imagen[data-proyecto="${proyectoIndex}"]`
+                );
+
+                const actual =
+                    Number(imagen.dataset.imagen);
+
+                cambiarImagen(
+                    proyectoIndex,
+                    actual + 1
+                );
+
+            });
+
+        });
+
+
+    // FLECHA ANTERIOR
+
+    document.querySelectorAll(".proyecto-anterior")
+        .forEach(boton => {
+
+            boton.addEventListener("click", () => {
+
+                const proyectoIndex =
+                    Number(boton.dataset.proyecto);
+
+                const imagen = document.querySelector(
+                    `.proyecto-imagen[data-proyecto="${proyectoIndex}"]`
+                );
+
+                const actual =
+                    Number(imagen.dataset.imagen);
+
+                cambiarImagen(
+                    proyectoIndex,
+                    actual - 1
+                );
+
+            });
+
+        });
+
+
+    // PUNTITOS
+
+    document.querySelectorAll(".proyecto-punto")
+        .forEach(punto => {
+
+            punto.addEventListener("click", () => {
+
+                cambiarImagen(
+                    Number(punto.dataset.proyecto),
+                    Number(punto.dataset.imagen)
+                );
+
+            });
+
+        });
+
+}
 
   // REDES
 

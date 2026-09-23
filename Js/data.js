@@ -97,34 +97,64 @@ const portfolioData = {
 ],
 
     proyectos: [
-        {
-            titulo: "ProyectaComercio",
-            descripcion: "Sistema web de gestión comercial e inventario para agro/jardinería. Vistas por rol (Admin y Empleado), alertas de stock bajo, facturación en PDF y persistencia en SQL Server.",
-            imagen: "Imagenes/ProyectaComercio.png",
-            tags: ["C#", "ASP.NET", "SQL Server", "Bootstrap"]
-        },
-        {
-            titulo: "Gestión de Artículos",
-            descripcion: "Aplicación de escritorio desarrollada con C#, SQL Server y .NET Framework para la administración ágil de inventario y catálogo de productos.",
-            imagen: "Imagenes/TpWinform.png",
-            tags: ["C#", ".NET", "SQL Server"]
-        },
-        {
-            titulo: "SimuMesa",
-            descripcion: "Sistema en C++ con persistencia en archivos para almacenar y recuperar información de restaurantes: pedidos, menús y reservas.",
-            imagen: "Imagenes/SimuMesa.png",
-            tags: ["C++", "Archivos"]
-        },
-        {
-            titulo: "PlantasSabias",
-            descripcion: "Sitio web educativo y comercial sobre jardinería y cuidado botánico, desarrollado con maquetación en HTML5 y CSS3.",
-            imagen: "Imagenes/PlantaSabias.png",
-            tags: ["HTML5", "CSS3"]
-        }
+    {
+        titulo: "ProyectaComercio",
+        descripcion: "Sistema web de gestión comercial e inventario para agro/jardinería. Permite administrar productos, ventas, compras, clientes y proveedores, con vistas diferenciadas según el rol del usuario, alertas de stock bajo y generación de reportes en PDF.",
+        
+        imagenes: [
+            "Imagenes/ProyectaComercio.png",
+            "Imagenes/ProyectaComercio2.png",
+            "Imagenes/ProyectaComercio3.png"
+        ],
+
+        tags: ["C#", "ASP.NET", "SQL Server", "Bootstrap"],
+        github: "#"
+    },
+
+    {
+        titulo: "Gestión de Artículos",
+        descripcion: "Aplicación de escritorio desarrollada con C#, SQL Server y .NET Framework para la administración de inventario y catálogo de productos. Incluye gestión de categorías, marcas, búsquedas y control de stock.",
+
+        imagenes: [
+            "Imagenes/TpWinform.png",
+            "Imagenes/TpWinform2.png",
+            "Imagenes/TpWinform3.png"
+        ],
+
+        tags: ["C#", ".NET Framework", "SQL Server"],
+        github: "#"
+    },
+
+    {
+        titulo: "SimuMesa",
+        descripcion: "Sistema desarrollado en C++ para gestionar información de restaurantes, incluyendo pedidos, menús y reservas mediante persistencia en archivos.",
+
+        imagenes: [
+            "Imagenes/SimuMesa.png",
+            "Imagenes/SimuMesa2.png"
+        ],
+
+        tags: ["C++", "Archivos"],
+        github: "#"
+    },
+
+    {
+        titulo: "PlantasSabias",
+        descripcion: "Sitio web educativo y comercial sobre jardinería y cuidado botánico, desarrollado con HTML5 y CSS3, con diseño orientado a una navegación simple y clara.",
+
+        imagenes: [
+            "Imagenes/PlantaSabias.png",
+            "Imagenes/PlantaSabias2.png"
+        ],
+
+        tags: ["HTML5", "CSS3"],
+        github: "#"
+    }
     ],
 
     redes: {
-        github: "https://github.com/AndresBenz",
-        linkedin: "https://www.linkedin.com/in/andres-esteban-benitez"
-    }
+    github: "https://github.com/AndresBenz",
+    linkedin: "https://www.linkedin.com/in/andres-esteban-benitez"
+}
+
 };
