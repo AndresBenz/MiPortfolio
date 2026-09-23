@@ -417,3 +417,212 @@ body {
         font-size: 17px;
     }
 }
+
+/* ============================= */
+/* SKILLS */
+/* ============================= */
+
+.skills {
+    position: relative;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 110px 20px;
+    box-sizing: border-box;
+}
+
+.skills-contenedor {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 1050px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+/* subtitulo */
+
+.skills-subtitulo {
+    display: block;
+
+    color: #BFA181;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 10px;
+}
+
+
+/* titulo */
+
+.skills h2 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: clamp(38px, 4vw, 55px);
+    font-weight: 800;
+}
+
+
+/* linea */
+
+.skills-linea {
+    width: 55px;
+    height: 3px;
+
+    margin: 18px auto 25px;
+
+    border-radius: 10px;
+
+    background: #cc690c;
+
+    box-shadow: 0 0 15px rgba(204, 105, 12, 0.45);
+}
+
+
+/* descripción */
+
+.skills-descripcion {
+    max-width: 650px;
+
+    margin: 0 auto 50px;
+
+    color: #b9bdc7;
+
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* GRID */
+
+.skills-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+
+/* CARD */
+
+.skill-card {
+    position: relative;
+
+    padding: 30px 20px;
+
+    border: 1px solid rgba(204, 105, 12, 0.20);
+
+    border-radius: 18px;
+
+    background: rgba(20, 11, 4, 0.20);
+
+    backdrop-filter: blur(8px);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+
+/* HOVER */
+
+.skill-card:hover {
+    transform: translateY(-7px);
+
+    border-color: rgba(204, 105, 12, 0.65);
+
+    background: rgba(204, 105, 12, 0.07);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.25),
+        0 0 25px rgba(204, 105, 12, 0.12);
+}
+
+
+/* CONTENEDOR DEL LOGO */
+
+.skill-icono {
+    width: 75px;
+    height: 75px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* LOGO */
+
+.skill-icono img {
+    width: 60px;
+    height: 60px;
+
+    object-fit: contain;
+
+    transition: transform 0.3s ease;
+}
+
+
+.skill-card:hover .skill-icono img {
+    transform: scale(1.12);
+}
+
+
+/* NOMBRE */
+
+.skill-card h3 {
+    margin: 0 0 7px;
+
+    color: #ffffff;
+
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+/* CATEGORIA */
+
+.skill-card > span {
+    color: #BFA181;
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+}

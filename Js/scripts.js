@@ -9,14 +9,45 @@ document.addEventListener("DOMContentLoaded", () => {
     if (elSaludo) elSaludo.textContent = personal.saludo;
     if (elSobreMi) elSobreMi.textContent = personal.sobreMi;
 
+    const sobreMiDatos = document.getElementById("sobre-mi-datos");
+
+if (sobreMiDatos) {
+
+    sobreMiDatos.innerHTML = personal.datosSobreMi.map(dato => `
+        <div class="dato-card">
+
+            <span class="dato-icono">${dato.icono}</span>
+
+            <div>
+                <h3>${dato.titulo}</h3>
+                <p>${dato.principal}</p>
+                <span>${dato.detalle}</span>
+            </div>
+
+        </div>
+    `).join("");
+
+}
+
      // SKILLS
 
     const skillsContainer = document.getElementById("skills-container");
     if (skillsContainer) {
         skillsContainer.innerHTML = skills.map(skill => `
-            <div class="skill-item">
-                <img src="${skill.imagen}" alt="${skill.nombre}" title="${skill.nombre}">
+           <div class="skill-card">
+
+            <div class="skill-icono">
+                <img 
+                    src="${skill.imagen}" 
+                    alt="${skill.nombre}"
+                >
             </div>
+
+            <h3>${skill.nombre}</h3>
+
+            <span>${skill.categoria}</span>
+
+        </div>
         `).join("");
     }
 

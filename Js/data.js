@@ -4,17 +4,62 @@ const portfolioData = {
         nombre: "Andres Esteban Benitez",
         titulo: "Desarrollador de Software",
         saludo: "Bienvenido Este es mi rincón digital. Mirá en qué estuve trabajando y charlemos sobre cómo impulsar tu próximo proyecto.",
-        sobreMi: "Técnico en Programación egresado de la UTN. Más allá de cualquier lenguaje, lo que me mueve es la lógica detrás de los sistemas: entender cómo conectar las piezas, estructurar bien los datos y resolver problemas reales con código claro, ordenado y pensado para durar."
+        sobreMi: "Técnico en Programación egresado de la UTN. Más allá de cualquier lenguaje, lo que me mueve es la lógica detrás de los sistemas: entender cómo conectar las piezas, estructurar bien los datos y resolver problemas reales con código claro, ordenado y pensado para durar.",
+        
+         datosSobreMi: [
+        {
+            icono: "🎓",
+            titulo: "Formación",
+            principal: "Técnico en Programación",
+            detalle: "UTN FRGP"
+        },
+        {
+            icono: "💻",
+            titulo: "Enfoque",
+            principal: "Desarrollo Backend",
+            detalle: ".NET / C#"
+        },
+        {
+            icono: "⚡",
+            titulo: "Objetivo",
+            principal: "Desarrollador Junior",
+            detalle: "Aprendizaje continuo"
+        }
+    ]
     },
 
     skills: [
-        { nombre: "C++", imagen: "Imagenes/c.png" },
-        { nombre: "C#", imagen: "Imagenes/csharpU.png" },
-        { nombre: "Java", imagen: "Imagenes/java.png" },
-        { nombre: "HTML5", imagen: "Imagenes/html-5.png" },
-        { nombre: "CSS3", imagen: "Imagenes/css-3.png" },
-        { nombre: "JavaScript", imagen: "Imagenes/JavaScript-logo.png" }
-    ],
+    { 
+        nombre: "C++", 
+        imagen: "Imagenes/c.png",
+        categoria: "Lenguaje"
+    },
+    { 
+        nombre: "C#", 
+        imagen: "Imagenes/csharpU.png",
+        categoria: "Lenguaje"
+    },
+    { 
+        nombre: "Java", 
+        imagen: "Imagenes/java.png",
+        categoria: "Lenguaje"
+    },
+    { 
+        nombre: "HTML5", 
+        imagen: "Imagenes/html-5.png",
+        categoria: "Frontend"
+    },
+    { 
+        nombre: "CSS3", 
+        imagen: "Imagenes/css-3.png",
+        categoria: "Frontend"
+    },
+    { 
+        nombre: "JavaScript", 
+        imagen: "Imagenes/JavaScript-logo.png",
+        categoria: "Frontend"
+    }
+],
 
     proyectos: [
         {
