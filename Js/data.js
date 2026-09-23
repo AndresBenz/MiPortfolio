@@ -39,6 +39,23 @@ const portfolioData = {
         imagen: "Imagenes/csharpU.png",
         categoria: "Lenguaje"
     },
+     { 
+        nombre: ".NET", 
+        imagen: "Imagenes/dotnet.webp",
+        categoria: "Framework"
+    },
+
+    { 
+        nombre: "SQL Server", 
+        imagen: "Imagenes/sqlserver.png",
+        categoria: "Base de datos"
+    },
+    { 
+        nombre: "MySQL", 
+        imagen: "Imagenes/mysql.png",
+        categoria: "Base de datos"
+    },
+
     { 
         nombre: "Java", 
         imagen: "Imagenes/java.png",
@@ -58,7 +75,25 @@ const portfolioData = {
         nombre: "JavaScript", 
         imagen: "Imagenes/JavaScript-logo.png",
         categoria: "Frontend"
+    },
+     { 
+        nombre: "Tailwind CSS", 
+        imagen: "Imagenes/tailwind.png",
+        categoria: "Frontend"
+    },
+    { 
+        nombre: "Bootstrap", 
+        imagen: "Imagenes/bootstrap.png",
+        categoria: "Frontend"
+    },
+
+    { 
+        nombre: "Git / GitHub", 
+        imagen: "Imagenes/github.png",
+        categoria: "Herramienta"
     }
+
+
 ],
 
     proyectos: [
