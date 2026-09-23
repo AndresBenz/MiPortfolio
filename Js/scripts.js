@@ -64,15 +64,16 @@ if (proyectosContainer) {
             <!-- IMAGEN / CARRUSEL -->
             <div class="proyecto-galeria">
 
-                <div class="proyecto-imagen-wrapper">
+                <<div class="proyecto-imagen-wrapper skeleton">
 
-                    <img
-                        class="proyecto-imagen"
-                        src="${proy.imagenes[0]}"
-                        alt="${proy.titulo}"
-                        data-proyecto="${index}"
-                        data-imagen="0"
-                    >
+    <img
+        class="proyecto-imagen"
+        src="${proy.imagenes[0]}"
+        alt="${proy.titulo}"
+        data-proyecto="${index}"
+        data-imagen="0"
+        onload="this.parentElement.classList.remove('skeleton')"
+    >
 
                     ${proy.imagenes.length > 1 ? `
 
@@ -514,4 +515,20 @@ particlesJS("particles-fondo", {
     retina_detect: true
 
 });
+
+// ===============================
+// CV
+// ===============================
+
+const btnCv = document.getElementById("btn-cv");
+const btnCvTexto = document.getElementById("btn-cv-texto");
+
+if (btnCv) {
+    btnCv.href = cv.archivo;
+}
+
+if (btnCvTexto) {
+    btnCvTexto.textContent = cv.texto;
+}
+
 });

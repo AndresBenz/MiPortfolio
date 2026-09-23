@@ -173,6 +173,11 @@ const portfolioData = {
     redes: {
     github: "https://github.com/AndresBenz",
     linkedin: "https://www.linkedin.com/in/andres-esteban-benitez"
-}
+},
+
+cv: {
+    texto: "Descargar CV",
+    archivo: "Documentos/CV-Andres-Benitez.pdf"
+},
 
 };

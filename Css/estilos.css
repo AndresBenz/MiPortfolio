@@ -1622,3 +1622,184 @@ body {
     color: #BFA181;
     transition: color 0.3s ease;
 }
+
+
+/* ===============================
+   BOTÓN FLOTANTE CV
+================================ */
+
+.btn-cv-flotante {
+    position: fixed;
+
+    right: 28px;
+    bottom: 28px;
+
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 9px 12px 9px 10px;
+
+    border: 1px solid rgba(204, 105, 12, 0.55);
+    border-radius: 50px;
+
+    background: rgba(20, 11, 4, 0.88);
+
+    backdrop-filter: blur(12px);
+
+    color: #ffeedd;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.35),
+        0 0 18px rgba(204, 105, 12, 0.10);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* ICONO DEL DOCUMENTO */
+
+.btn-cv-documento {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(204, 105, 12, 0.18);
+
+    color: #cc690c;
+}
+
+.btn-cv-documento svg {
+    width: 19px;
+    height: 19px;
+}
+
+
+/* TEXTO CV */
+
+#btn-cv-texto {
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+
+/* ICONO DESCARGA */
+
+.btn-cv-descarga {
+    width: 29px;
+    height: 29px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #cc690c;
+
+    color: white;
+
+    transition: transform 0.3s ease;
+}
+
+.btn-cv-descarga svg {
+    width: 16px;
+    height: 16px;
+}
+
+
+/* HOVER */
+
+.btn-cv-flotante:hover {
+    transform: translateY(-4px);
+
+    border-color: #cc690c;
+
+    background: rgba(204, 105, 12, 0.14);
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.40),
+        0 0 25px rgba(204, 105, 12, 0.20);
+}
+
+.btn-cv-flotante:hover .btn-cv-descarga {
+    transform: translateY(3px);
+}
+
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    .btn-cv-flotante {
+        right: 16px;
+        bottom: 16px;
+    }
+
+}
+
+
+.skeleton {
+    position: relative;
+    overflow: hidden;
+
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.skeleton::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    z-index: 5;
+
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.08) 50%,
+        transparent 100%
+    );
+
+    transform: translateX(-100%);
+
+    animation: skeleton-loading 1.4s infinite;
+}
+
+@keyframes skeleton-loading {
+
+    100% {
+        transform: translateX(100%);
+    }
+
+}
+
+.skeleton .proyecto-imagen {
+    opacity: 0;
+}
+
+.proyecto-imagen {
+    transition: opacity 0.4s ease;
+}
+
+.proyecto-imagen-wrapper:not(.skeleton) .proyecto-imagen {
+    opacity: 1;
+}
