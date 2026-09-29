@@ -1,5 +1,6 @@
 .menu-toggle,
-.menu-movil {
+.menu-movil,
+.btn-cv-texto-movil {
     display: none;
 }
 
@@ -12,28 +13,21 @@
         gap: 5px;
         width: 44px;
         height: 44px;
+        flex-shrink: 0;
+        color: #ffeedd;
         border: 1px solid #cc690c66;
         border-radius: 50%;
         background: #cc690c20;
         cursor: pointer;
     }
 
-    .menu-toggle span {
-        width: 20px;
-        height: 2px;
-        background: #ffeedd;
+    .menu-icono-cerrar,
+    .menu-toggle[aria-expanded="true"] .menu-icono-abrir {
+        display: none;
     }
 
-    .menu-toggle[aria-expanded="true"] span:first-child {
-        transform: translateY(7px) rotate(45deg);
-    }
-
-    .menu-toggle[aria-expanded="true"] span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .menu-toggle[aria-expanded="true"] span:last-child {
-        transform: translateY(-7px) rotate(-45deg);
+    .menu-toggle[aria-expanded="true"] .menu-icono-cerrar {
+        display: block;
     }
 
     .menu-movil:not([hidden]) {
@@ -1829,11 +1823,29 @@ body {
 
 /* CELULAR */
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
 
     .btn-cv-flotante {
         right: 16px;
-        bottom: 16px;
+        bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+        width: 48px;
+        height: 48px;
+        padding: 0;
+        gap: 0;
+        justify-content: center;
+    }
+
+    .btn-cv-flotante .btn-cv-documento,
+    .btn-cv-flotante .btn-cv-descarga,
+    .btn-cv-flotante #btn-cv-texto {
+        display: none;
+    }
+
+    .btn-cv-texto-movil {
+        display: inline;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
     }
 
 }
