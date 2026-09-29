@@ -20,6 +20,9 @@
                 <span  class="text-[#E5ECE8] font-semibold text-base tracking-wide hover:opacity-90 transition">
                     Portfolio</span>
             </a>
+            <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-movil">
+                <span></span><span></span><span></span>
+            </button>
             <nav class="hidden md:flex items-center">
                 <ul class="flex items-center gap-2 text-sm font-medium">
                     <li><a href="#sobreMi" class="px-4 py-1.5 rounded-full bg-[#cc690c]/20 text-[#ffeedd] border border-[#cc690c]/40 shadow-[0_0_15px_rgba(204,105,12,0.25)] hover:-translate-y-0.5 hover:scale-105 active:scale-95 transition-all duration-300 ease-out block">Sobre mi</a></li>
@@ -30,7 +33,13 @@
                 </ul>
             </nav>
         </div>
-      
+        <nav id="menu-movil" class="menu-movil" aria-label="Navegación móvil" hidden>
+            <a href="#inicio">Inicio</a>
+            <a href="#sobreMi">Sobre mí</a>
+            <a href="#skills">Tecnologías</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
         
     </header>
 
@@ -265,6 +274,7 @@
                         <input
                             type="text"
                             id="nombreApellido"
+                            maxlength="60"
                             placeholder="Tu nombre"
                             required>
 
@@ -280,6 +290,7 @@
                         <input
                             type="email"
                             id="correoElectronico"
+                            maxlength="254"
                             placeholder="email@dominio.com"
                             required>
 
@@ -295,9 +306,12 @@
                     </label>
 
                     <input
-                        type="tel"
+                         type="tel"
                         id="telefono"
-                        placeholder="+54 11...">
+                        maxlength="15"
+                        inputmode="numeric"
+                        pattern="[0-9]*"
+                        placeholder="541112345678">
 
                 </div>
 
@@ -311,8 +325,11 @@
                     <textarea
                         id="mensaje"
                         rows="6"
+                         maxlength="300"
+                        aria-describedby="contador-mensaje"
                         placeholder="Contame un poco sobre tu propuesta..."
                         required></textarea>
+                    <small id="contador-mensaje" class="contador-mensaje">300 caracteres restantes</small>
 
                 </div>
 

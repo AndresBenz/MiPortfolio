@@ -1,4 +1,35 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.getElementById("menu-toggle");
+    const menuMovil = document.getElementById("menu-movil");
+    const vistaEscritorio = window.matchMedia("(min-width: 768px)");
+
+    function cambiarMenu(abierto) {
+        menuMovil.hidden = !abierto;
+        menuToggle.setAttribute("aria-expanded", String(abierto));
+        menuToggle.setAttribute("aria-label", abierto ? "Cerrar menú" : "Abrir menú");
+    }
+
+    menuToggle.addEventListener("click", () => cambiarMenu(menuMovil.hidden));
+    menuMovil.addEventListener("click", event => {
+        const enlace = event.target.closest("a");
+        if (!enlace) return;
+        cambiarMenu(false);
+        const seccion = document.querySelector(enlace.getAttribute("href"));
+        seccion.setAttribute("tabindex", "-1");
+        seccion.focus({ preventScroll: true });
+    });
+    document.addEventListener("click", event => {
+        if (!menuMovil.contains(event.target) && !menuToggle.contains(event.target)) cambiarMenu(false);
+    });
+    document.addEventListener("keydown", event => {
+        if (event.key === "Escape" && !menuMovil.hidden) {
+            cambiarMenu(false);
+            menuToggle.focus();
+        }
+    });
+    vistaEscritorio.addEventListener("change", () => {
+        if (vistaEscritorio.matches) cambiarMenu(false);
+    });
     const { personal, skills, proyectos, contacto, redes,cv } = portfolioData;
 
     const elNombre = document.getElementById("hero-nombre");
@@ -603,5 +634,34 @@ if (contactoGithub) {
 if (contactoLinkedin) {
     contactoLinkedin.href = redes.linkedin;
 }
+
+
+const nombre = document.getElementById("nombreApellido");
+const correo = document.getElementById("correoElectronico");
+const telefono = document.getElementById("telefono");
+const mensaje = document.getElementById("mensaje");
+const contador = document.getElementById("contador-mensaje");
+
+function validarCampos() {
+    nombre.value = nombre.value.replace(/\p{N}/gu, "").slice(0, nombre.maxLength);
+    nombre.setCustomValidity(nombre.value.trim() ? "" : "Ingresá tu nombre.");
+    correo.value = correo.value.slice(0, correo.maxLength);
+    telefono.value = telefono.value.replace(/[^0-9]/g, "").slice(0, telefono.maxLength);
+    mensaje.value = mensaje.value.slice(0, mensaje.maxLength);
+    actualizarContador();
+}
+
+[nombre, correo, telefono, mensaje].forEach(campo => {
+    campo.addEventListener("input", validarCampos);
+    campo.addEventListener("change", validarCampos);
+});
+
+function actualizarContador() {
+    contador.textContent =
+        `${Math.max(0, mensaje.maxLength - mensaje.value.length)} caracteres restantes`;
+}
+
+actualizarContador();
+
 
 });

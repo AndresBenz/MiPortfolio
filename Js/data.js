@@ -22,7 +22,7 @@ const portfolioData = {
         {
             icono: "⚡",
             titulo: "Objetivo",
-            principal: "Desarrollador Junior",
+            principal: "Crecimiento Profesional",
             detalle: "Aprendizaje continuo"
         }
     ]
@@ -110,12 +110,12 @@ const portfolioData = {
         ],
 
         tags: ["C#", "ASP.NET", "SQL Server", "Bootstrap"],
-        github: "#"
+        github: "https://github.com/AndresBenz/ProyectaComercio.git"
     },
 
     {
         titulo: "Gestión de Artículos",
-        descripcion: "Aplicación de escritorio desarrollada con C#, SQL Server y .NET Framework para la administración de inventario y catálogo de productos. Incluye gestión de categorías, marcas, búsquedas y control de stock.",
+        descripcion: "Aplicación de escritorio desarrollada con C# y Windows Forms para la administración de inventario y catálogo de productos. Utiliza SQL Server para la persistencia de datos e incluye gestión de categorías, marcas, búsquedas y control de stock.",
 
         imagenes: [
             "Imagenes/TpWinform.png",
@@ -160,7 +160,7 @@ const portfolioData = {
     titulo: "Trabajemos",
     tituloDestacado: "juntos",
 
-    descripcion: "¿Tenés un proyecto, una propuesta o simplemente querés contactarme? Escribime y conversemos.",
+    
 
     miniTitulo: "HABLEMOS",
 
@@ -177,7 +177,7 @@ const portfolioData = {
 
 cv: {
     texto: "Descargar CV",
-    archivo: "Documentos/CV-Andres-Benitez.pdf"
+    archivo: "Imagenes/CV-Andres-Benitez.pdf"
 },
 
 };
