@@ -114,31 +114,18 @@ const portfolioData = {
     },
 
     {
-        titulo: "Gestión de Artículos",
-        descripcion: "Aplicación de escritorio desarrollada con C# y Windows Forms para la administración de inventario y catálogo de productos. Utiliza SQL Server para la persistencia de datos e incluye gestión de categorías, marcas, búsquedas y control de stock.",
+    titulo: "Tienda Mundo Shop",
+    descripcion: "Aplicación web de catálogo de productos y carrito de compras desarrollada en equipo con compañeros. Utilizamos C# y ASP.NET Web Forms sobre .NET Framework 4.8, con SQL Server para almacenar artículos, marcas, categorías e imágenes. Permite buscar productos, consultar sus detalles y agregarlos al carrito.",
 
-        imagenes: [
-            "Imagenes/TpWinform.png",
-            "Imagenes/TpWinform2.png",
-            "Imagenes/TpWinform3.png"
-        ],
+    imagenes: [
+        "Imagenes/Mundoshop.png",
+        "Imagenes/Mundoshop1.png",
+        "Imagenes/Mundoshop2.png"
+    ],
 
-        tags: ["C#", ".NET Framework", "SQL Server"],
-        github: "#"
-    },
-
-    {
-        titulo: "SimuMesa",
-        descripcion: "Sistema desarrollado en C++ para gestionar información de restaurantes, incluyendo pedidos, menús y reservas mediante persistencia en archivos.",
-
-        imagenes: [
-            "Imagenes/SimuMesa.png",
-            "Imagenes/SimuMesa2.png"
-        ],
-
-        tags: ["C++", "Archivos"],
-        github: "#"
-    },
+    tags: ["C#", "ASP.NET Web Forms", ".NET Framework", "SQL Server"],
+    github: "https://github.com/AndresBenz/Tp-Carrito-equipo-O1.git"
+},
 
     {
         titulo: "PlantasSabias",
@@ -146,11 +133,28 @@ const portfolioData = {
 
         imagenes: [
             "Imagenes/PlantaSabias.png",
-            "Imagenes/PlantaSabias2.png"
+            "Imagenes/PlantasSabias.png",
+            "Imagenes/PlantasSabias1.png",
+            "Imagenes/PlantasSabias2.png"
         ],
 
         tags: ["HTML5", "CSS3"],
-        github: "#"
+        github: "https://github.com/AndresBenz/PlantasSabias.git"
+    },
+
+    {
+        titulo: "Aterrizar.com",
+        descripcion: "Proyecto web académico de una etapa anterior de mi formación, desarrollado junto a dos compañeros de la facultad con ASP.NET y C#, utilizando SQL Server como base de datos.",
+
+        imagenes: [
+            "Imagenes/aterrizar1.png",
+            "Imagenes/aterrizar2.png",
+            "Imagenes/aterrizar3.png",
+            "Imagenes/aterrizar4.png"
+        ],
+
+        tags: ["ASP.NET", "C#", "SQL Server"],
+        github: "https://github.com/AndresBenz/Aterrizar.com.git"
     }
     ],
 

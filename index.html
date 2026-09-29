@@ -264,7 +264,9 @@
             <!-- =========================
                  FORMULARIO
             ========================== -->
-            <form class="formulario-contacto">
+            <form class="formulario-contacto" action="https://formsubmit.co/andres.bntz96@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="Nuevo mensaje desde mi portfolio">
+                <input type="hidden" name="_template" value="table">
 
                 <div class="formulario-fila">
 
@@ -277,6 +279,7 @@
                         <input
                             type="text"
                             id="nombreApellido"
+                            name="nombre"
                             maxlength="60"
                             placeholder="Tu nombre"
                             required>
@@ -293,6 +296,7 @@
                         <input
                             type="email"
                             id="correoElectronico"
+                            name="email"
                             maxlength="254"
                             placeholder="email@dominio.com"
                             required>
@@ -311,6 +315,7 @@
                     <input
                          type="tel"
                         id="telefono"
+                        name="telefono"
                         maxlength="15"
                         inputmode="numeric"
                         pattern="[0-9]*"
@@ -327,6 +332,7 @@
 
                     <textarea
                         id="mensaje"
+                        name="mensaje"
                         rows="6"
                          maxlength="300"
                         aria-describedby="contador-mensaje"
@@ -421,7 +427,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="Js/data.js?v=20260929-2"></script>
+    <script src="Js/data.js?v=20260929-5"></script>
     <script src="Js/scripts.js?v=20260929-3"></script>
 </body>
 
