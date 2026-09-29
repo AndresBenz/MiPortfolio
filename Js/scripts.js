@@ -4,12 +4,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const vistaEscritorio = window.matchMedia("(min-width: 768px)");
 
     function cambiarMenu(abierto) {
-        menuMovil.hidden = !abierto;
+        menuMovil.classList.toggle("abierto", abierto);
+        menuMovil.inert = !abierto;
         menuToggle.setAttribute("aria-expanded", String(abierto));
         menuToggle.setAttribute("aria-label", abierto ? "Cerrar menú" : "Abrir menú");
     }
 
-    menuToggle.addEventListener("click", () => cambiarMenu(menuMovil.hidden));
+    menuToggle.addEventListener("click", () => cambiarMenu(menuToggle.getAttribute("aria-expanded") !== "true"));
     menuMovil.addEventListener("click", event => {
         const enlace = event.target.closest("a");
         if (!enlace) return;
@@ -22,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!menuMovil.contains(event.target) && !menuToggle.contains(event.target)) cambiarMenu(false);
     });
     document.addEventListener("keydown", event => {
-        if (event.key === "Escape" && !menuMovil.hidden) {
+        if (event.key === "Escape" && menuToggle.getAttribute("aria-expanded") === "true") {
             cambiarMenu(false);
             menuToggle.focus();
         }
