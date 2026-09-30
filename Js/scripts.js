@@ -664,5 +664,57 @@ function actualizarContador() {
 
 actualizarContador();
 
+const formulario = document.querySelector(".formulario-contacto");
+const botonEnviar = formulario.querySelector('button[type="submit"]');
+const estadoFormulario = document.getElementById("estado-formulario");
+let enviando = false;
+
+formulario.addEventListener("submit", async event => {
+    event.preventDefault();
+    if (enviando) return;
+    validarCampos();
+    if (!formulario.reportValidity()) return;
+
+    enviando = true;
+    const contenidoBoton = botonEnviar.innerHTML;
+    const datos = new FormData(formulario);
+    const campos = [nombre, correo, telefono, mensaje];
+    campos.forEach(campo => { campo.readOnly = true; });
+    botonEnviar.disabled = true;
+    botonEnviar.textContent = "Enviando…";
+    formulario.setAttribute("aria-busy", "true");
+    estadoFormulario.dataset.estado = "enviando";
+    estadoFormulario.textContent = "Enviando tu mensaje…";
+    const controlador = new AbortController();
+    const tiempoLimite = setTimeout(() => controlador.abort(), 20000);
+
+    try {
+        const respuesta = await fetch(formulario.action, {
+            method: "POST",
+            body: datos,
+            headers: { Accept: "application/json" },
+            signal: controlador.signal
+        });
+        if (!respuesta.ok) throw new Error("No se pudo confirmar el envío");
+
+        formulario.reset();
+        campos.forEach(campo => campo.setCustomValidity(""));
+        actualizarContador();
+        estadoFormulario.dataset.estado = "exito";
+        estadoFormulario.textContent = "¡Mensaje enviado! Gracias por escribirme. Te responderé pronto.";
+    } catch (error) {
+        estadoFormulario.dataset.estado = "error";
+        estadoFormulario.textContent = error.name === "AbortError"
+            ? "El servicio tardó demasiado. No pudimos confirmar el envío. Conservamos tu mensaje para que puedas reintentar."
+            : "No pudimos confirmar el envío. Conservamos tus datos; revisá tu conexión e intentá nuevamente.";
+    } finally {
+        clearTimeout(tiempoLimite);
+        enviando = false;
+        campos.forEach(campo => { campo.readOnly = false; });
+        botonEnviar.disabled = false;
+        botonEnviar.innerHTML = contenidoBoton;
+        formulario.removeAttribute("aria-busy");
+    }
+});
 
 });
